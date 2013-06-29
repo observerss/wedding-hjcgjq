@@ -16,9 +16,10 @@ Wedding-hjcgjq
 
 快速开始
 --------
+```bash
 git clone git@github.com:observerss/wedding-hjcgjq.git
 make
-
+```
 
 文档
 ----
