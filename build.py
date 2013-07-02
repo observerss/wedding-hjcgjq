@@ -39,16 +39,19 @@ def create_build_path():
 def build_one(path):
     """ build rst file on 'src/'+path, generate pdf on 'dist/'+path """
     build_path = create_build_path()
+    dirname = os.path.dirname(os.path.join('src', path))
 
     if os.path.exists(os.path.join('src', path)) and path.endswith('.rst'):
         os.system('rm -rf {}/*'.format(build_path))
         os.system('cp conf/* {}'.format(build_path))
-        os.system('cp src/{} {}/'.format(path, build_path))
+        os.system('cp {}/* {}/'.format(dirname, build_path))
         rstfname = path.rsplit('/', 1)[-1]
         name, dot, ext = rstfname.partition('.')
         xetexfname = name + dot + 'xetex'
         pdffname = name + dot + 'pdf'
-        os.system('cd {build_path} && rst2xetex.py --latex-preamble="" {rstfname} {xetexfname} && xelatex {xetexfname}'.format(**locals()))
+        os.system('cd {build_path} && ' \
+                  'rst2xetex.py --latex-preamble="" {rstfname} {xetexfname} && ' \
+                  'xelatex {xetexfname}'.format(**locals()))
         target_path = ensure_dir('dist/{}'.format(path))
         os.system('mv {build_path}/*.pdf {target_path}'.format(**locals()))
 
