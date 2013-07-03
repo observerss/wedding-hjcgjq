@@ -1,0 +1,104 @@
+body {
+    font-family: "Microsoft YaHei",微软雅黑,"STLiTi",arial,verdana,helvetica,sans-serif;
+}
+
+.padded {
+    padding-top: 60px;
+}
+
+/* From snap.css */
+ .snap-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.snap-drawers {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background: #394959;
+}
+.snap-drawer {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: auto;
+    width: 265px;
+    height: auto;
+    overflow: auto;
+    color: #e0c0a0;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -ms-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+.snap-drawer-left {
+    margin-top: -20px;
+    padding-left: 20px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    left: 0;
+    z-index: 1;
+}
+.snap-drawer-right {
+    right: 0;
+    z-index: 1;
+}
+.snapjs-left .snap-drawer-right, .snapjs-right .snap-drawer-left {
+    display: none;
+}
+.snapjs-expand-left .snap-drawer-left, .snapjs-expand-right .snap-drawer-right {
+    width: 100%;
+}
+
+.snap-drawer h3 {
+    margin: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+.snap-drawer ul {
+    padding: 0;
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+.snap-drawer li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.snap-drawer li > a {
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #b09070;
+    text-decoration: none;
+    color: #dba;
+    text-indent: 20px;
+}
+
+#content{
+    background: white;
+}
