@@ -41,7 +41,7 @@
 
     <!-- Drawers -->
     <div class="snap-drawers">
-        <div class="padded snap-drawer snap-drawer-left">
+        <div class="padded snap-drawer snap-drawer-left" style="width:160px;">
             <div>
                 <h3><a href="#">爱情历程</a></h3>
                 <ul>
@@ -107,6 +107,9 @@
             if (hash){
                 $('.snap-drawer li').removeClass('active');
                 $('[href="'+hash+'"]').parent().addClass('active');
+                if ($(window).width() < 640){
+                    snapper.close();
+                }
             }
             if (hash == '#gallery'){
                 load_gallery();

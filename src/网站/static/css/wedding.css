@@ -40,7 +40,7 @@ body {
     right: auto;
     bottom: 0;
     left: auto;
-    width: 265px;
+    width: 165px;
     height: auto;
     overflow: auto;
     color: #e0c0a0;
@@ -53,7 +53,7 @@ body {
 }
 .snap-drawer-left {
     margin-top: -20px;
-    padding-left: 20px;
+    padding-left: 10px;
     font-size: 1.2em;
     line-height: 1.5em;
     left: 0;
@@ -84,7 +84,7 @@ body {
 
 .snap-drawer ul {
     padding: 0;
-    margin-left: 20px;
+    margin-left: 0px;
     list-style-type: none;
 }
 
